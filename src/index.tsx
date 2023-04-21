@@ -40,8 +40,9 @@ createServer({
 
     this.post('/transactions', (schema, request) => {
       const data = JSON.parse(request.requestBody)
+      console.log('post: ', data)
 
-      return schema.create('transactions', data)
+      return schema.create('transaction', data)
     })
   }
 })
